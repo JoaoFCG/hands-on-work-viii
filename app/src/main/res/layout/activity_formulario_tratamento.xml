@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.activity.FormularioTratamentoActivity">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_formulario_textinputlayout_nome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Nome"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activity_formulario_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_formulario_textinputlayout_frequencia"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Frequência (a cada X horas)"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintStart_toStartOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_textinputlayout_nome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activity_formulario_frequencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/activity_formulario_horario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horário Inicial"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_textinputlayout_frequencia" />
+
+            <TextView
+                android:id="@+id/activity_formulario_preview_horario"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="00:00"
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/activity_formulario_horario"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_textinputlayout_frequencia" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/activity_formulario_textinputlayout_doses"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Número de Doses"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintStart_toStartOf="@+id/activity_formulario_textinputlayout_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_horario">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/activity_formulario_doses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/activity_formulario_botao_concluir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/teal_200"
+                android:backgroundTintMode="screen"
+                android:text="Concluir"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/activity_formulario_textinputlayout_doses"
+                app:layout_constraintVertical_bias="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

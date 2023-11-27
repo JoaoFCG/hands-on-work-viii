@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="ui.activity.DetalhesProdutoActivity">
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_nome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Nome"/>
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_categoria_frequencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_nome"
+                tools:text="Frequência:"
+                />
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_frequencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_categoria_frequencia"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_categoria_frequencia"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_categoria_frequencia"
+                tools:text="A cada x horas"
+                />
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_categoria_horario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_frequencia"
+                tools:text="Próximo Horário:"
+                />
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_horario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_categoria_horario"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_categoria_horario"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_categoria_horario"
+                tools:text="hh:mm"
+                />
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_categoria_doses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_nome"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_horario"
+                tools:text="Doses Restantes:"
+                />
+
+            <TextView
+                android:id="@+id/activity_detalhes_tratamento_doses"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:flow_verticalBias="0.0"
+                android:gravity="top"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/activity_detalhes_tratamento_categoria_doses"
+                app:layout_constraintStart_toStartOf="@+id/activity_detalhes_tratamento_categoria_doses"
+                app:layout_constraintTop_toBottomOf="@+id/activity_detalhes_tratamento_categoria_doses"
+                tools:text="x"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
